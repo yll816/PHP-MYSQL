@@ -16,13 +16,14 @@
 </head>
 <body>
     <?php
-    include_once("config.php");
-    $sql="SELECT * FROM users";
-    $getUsers = $getconn ->prepare($sql);
-    $getUsers ->execute();
-    $users=$getUsers->fetchall();
+        include_once('config.php');
+        $sql = "SELECT * FROM users";
+        $getUsers = $conn->prepare($sql);
+        $getUsers->execute();
+        $users=$getUsers->fetchAll();
     ?>
     <br> <br>
+
 
     <table>
         <thead>

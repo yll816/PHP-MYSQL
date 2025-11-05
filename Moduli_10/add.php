@@ -10,7 +10,7 @@
 		$email = $_POST['email'];
 
 		
-        $sql = "insert into user (name, surname, email) values (:name, :surname, :email)";
+        $sql = "insert into users(name, surname, email) values (:name, :surname, :email)";
         $sqlQuery = $conn->prepare($sql);
     
         $sqlQuery->bindParam(':name', $name); 
@@ -27,6 +27,7 @@
 <html>
     <head></head>
     <body>
+        <a href="dashboard.php">Dashboard</a>
         <form action="add.php" method="POST">
             <input type="text" name="name" placeholder="Name"></br>
             <input type="text" name="surname" placeholder="Surname"></br>
