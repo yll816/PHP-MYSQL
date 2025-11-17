@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +8,16 @@
     <title>Document</title>
     <style>
         table,td,th{
-            border:1px solid black;
-            border-collapse: collapse;
+            border: 1px solid black;
+            border-collapse:collapse;
         }
         td,th{
-            padding:10px 20px;
+            padding:10px, 20px;
         }
     </style>
 </head>
 <body>
-    <?php
+   <?php
         include_once('config.php');
         $sql = "SELECT * FROM users";
         $getUsers = $conn->prepare($sql);
@@ -28,9 +30,8 @@
     <table>
         <thead>
             <th>ID</th>
-            <th>Name</th>
-            <th>Surname</th>
             <th>Email</th>
+            <th>Password</th>
         </thead>
     <tbody>
         <?php
@@ -38,10 +39,10 @@
 ?> 
     <tr>
         <td> <?= $user['id'] ?> </td>
-        <td> <?= $user['name'] ?> </td>
-        <td> <?= $user['surname'] ?> </td>
         <td> <?= $user['email'] ?></td>
-        <td><?= "<a href='delete.php?id=$user[id]'> Delete </a> | <a href='edit.php?id=$user[id]'> Update </a> " ?></td>
+        <td> <?= $user['password'] ?> </td>
+        
+         
     </tr>
     <?php
             }
